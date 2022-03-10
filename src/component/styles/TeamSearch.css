@@ -1,0 +1,28 @@
+.TeamSearch{
+    width: 250px;
+    display: flex;
+    align-items: center;
+}
+.TeamSearch label{
+    position: relative;
+    margin-left: 10px;
+}
+.TeamSearch input{
+    border: none;
+    width: 100%;
+    border-bottom:  2px solid #000;
+    outline: none;
+}
+/* .TeamSearch input:focus{
+    box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.342);
+} */
+.TeamSearch label span{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0,-50%);
+}
