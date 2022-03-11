@@ -4,6 +4,7 @@ import { UserProvider } from './context/UserContext';
 import './App.css';
 import { Routes,Route } from 'react-router-dom';
 import CardGrid from './component/CardGrid';
+import CardList from './component/CardList';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
          </aside>
          <Team />
          <Routes>
-            <Route path="/grid" element={<CardGrid />}/>
+            <Route path="/" element={<CardGrid />}/>
+            <Route path="list" element={<CardList />}/>
          </Routes>
       </main>
    </UserProvider>
