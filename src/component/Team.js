@@ -32,9 +32,7 @@ function Team() {
          <Outlet />
          {grid ?
              <div className='Team-grid'>
-             {team.map(teammate => (
-                 <CardGrid {...teammate} key={uuid()}/> 
-             ))}
+              <CardGrid />
            </div> :
            <div>
                 {team.map(teammate => (
