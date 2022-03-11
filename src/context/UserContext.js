@@ -6,7 +6,7 @@ export function UserProvider({children}) {
   const [team,setTeam] = useState(null || [])
   const [search,setSearch] = useState(false)
   useEffect(()=>{
-    async function users(url='https://randomuser.me/api/?results=3'){
+    async function users(url='https://randomuser.me/api/?results=9'){
        try {
          const data = await axios.get(url)
          const res = await data.data.results

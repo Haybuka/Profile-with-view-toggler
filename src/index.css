@@ -1,14 +1,17 @@
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-}
+
 *{
   padding: 0;
   margin: 0;
   list-style: none;
   box-sizing: border-box;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+:root{
+  --text-dark : #000000bf;
 }

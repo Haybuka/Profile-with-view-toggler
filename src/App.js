@@ -1,17 +1,17 @@
 
 import Team from './component/Team';
 import { UserProvider } from './context/UserContext';
-import './App.css';
 import { Routes,Route } from 'react-router-dom';
 import CardGrid from './component/CardGrid';
 import CardList from './component/CardList';
+import './App.css';
 
 function App() {
   return (
    <UserProvider>
       <main className="App">
         <section>
-             <h1>Meet the Team</h1>
+             <h1 >Meet the Team</h1>
          </section>
          <Team />
          <Routes>

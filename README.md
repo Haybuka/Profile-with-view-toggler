@@ -1,4 +1,109 @@
-# Getting Started with Create React App
+# Profile Fetcher with Layout Toggler
+
+This is a project that seeks to test the following to properly effect my learning :
+ 1. Balanced use of vanilla Css and or other library (tailwind, material ui)
+ 2. Use of React Js 
+ 3. React router 6 {Routes,Route,Outlet,Navlink}
+ 4. use of Context {context creation and consumption}
+ 5. Proper Component flow and structuring
+ 6. Use of Api and data display
+ 7. use Effect hooks and the axios package
+ 8. other minor details .
+ 9. Responsive design {Desktop first}
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Toggle layout between views
+- see a proper page render on toggle view
+- Search for a profile based on name
+- Sort displayed data in ascending order
+
+### Screenshot
+
+![](./screenshot.png)
+
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Desktop-first workflow
+- [React](https://reactjs.org/) - JS library
+- Axios
+- Random Data Api.
+
+### What I learned
+
+ where to start 🤔, the major milestones have been documented at the top of this readMe file, its basically those listed items,but in no partivular order.
+
+```js
+export const UserContext = createContext()
+export function UserProvider({children}) {
+  const [values,setValues] = useState(null || [])
+  useEffect(()=>{
+    async function users(url){
+         const data = await axios.get(url)
+         const res = await data.data.results
+         setTeam(res)
+    }
+    users()
+ },[search])
+  return (
+    <UserContext.Provider value={values}>
+        {children}
+    </UserContext.Provider>
+  )
+}
+```
+### Continued development
+
+For continued development, i still think useReducer can be added to this project. Maybe a form to add items or new contacts to the list, that way further working on the project creates more tasks.
+
+### Useful resources
+
+- [React Router](https://reactrouter.com/docs/en/v6/getting-started/installation) - This reference was helpful on getting started with the updated router 6 and new concept.
+
+
+
+## Author
+
+- Website - [Ndulue Paschal](https://chukwu.netlify.app/)
+- Frontend Mentor - [@Haybuka](https://www.frontendmentor.io/profile/Haybuka)
+- Twitter - [@haybukarh](https://twitter.com/haybukarh)
+
+**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+
+## Acknowledgments
+
+I want to thank myself for not giving up (funny right?, but yea, it was not easy taking up a project of this size), and also friends who have helped to point out some design flaws.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -7,64 +112,3 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

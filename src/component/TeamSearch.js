@@ -1,12 +1,18 @@
 import React,{useState,useContext} from 'react'
 import { UserContext } from '../context/UserContext'
 import '../component/styles/TeamSearch.css'
+
 function TeamSearch() {
   const {team,setTeam,search,setSearch} = useContext(UserContext)
   const [user,setUser] = useState('');
- function handleChange(e){
+
+ //handle input state change
+  function handleChange(e){
     setUser(e.target.value)
- }
+  }
+ 
+  //handle on form submit 
+
  function handleSubmit(e){
     e.preventDefault()
    let userName = user.slice(0,1).toUpperCase() + user.slice(1).toLowerCase()
@@ -21,15 +27,19 @@ function TeamSearch() {
                 }
       }}
     setTeam([newTeam])
+    
+    //searching for a user
     setTimeout(() => {
       setSearch(!search)
     }, 2000);
  }
+ //handle data sorting
  function handleSort(){
   const newTeam = team.sort((a,b)=> a.name.first > b.name.first)
   const userTeam = newTeam.map(team => team.nat ? {...team, nat : ""} : team)
   setTeam(userTeam)
  }
+
   return (
     <form onSubmit={handleSubmit} className="TeamSearch">
         <p className='TeamSearch-order' onClick={handleSort}>
