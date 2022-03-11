@@ -10,9 +10,9 @@ function App() {
   return (
    <UserProvider>
       <main className="App">
-        <aside>
+        <section>
              <h1>Meet the Team</h1>
-         </aside>
+         </section>
          <Team />
          <Routes>
             <Route path="/" element={<CardGrid />}/>

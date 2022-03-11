@@ -1,14 +1,13 @@
 import React,{useContext} from 'react'
 import { UserContext } from '../context/UserContext'
-import {v4 as uuid} from 'uuid'
 import './styles/CardGrid.css'
-function CardGrid({name,email,location,picture,login}) {
-  const {team,setTeam} = useContext(UserContext)
+function CardGrid() {
+  const {team} = useContext(UserContext)
   return (
      <section className='Grid-container'>
           {
             team.map(teammate => (
-              <div className='Card-Grid'>
+              <div className='Card-Grid' key={teammate.login.uuid}>
               <h3>{teammate.name.first} {teammate.name.last}</h3>
               <span>
                 <img src={teammate.picture.large} alt={teammate.name.first} className="Card-img"/>
