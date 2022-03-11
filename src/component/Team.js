@@ -21,7 +21,7 @@ function Team() {
                </svg>
             </Link>) : 
             (
-                <Link to="/list">
+                <Link to="list">
                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20 19.8H2C1.44772 19.8 1 19.3523 1 18.8C1 18.2477 1.44772 17.8 2 17.8H20C20.5523 17.8 21 18.2477 21 18.8C21 19.3523 20.5523 19.8 20 19.8Z" fill="black" stroke="black" stroke-linecap="round"/>
                         <path d="M20 11.4H2C1.44772 11.4 1 10.9523 1 10.4C1 9.84774 1.44772 9.40002 2 9.40002H20C20.5523 9.40002 21 9.84774 21 10.4C21 10.9523 20.5523 11.4 20 11.4Z" fill="black" stroke="black" stroke-linecap="round"/>
