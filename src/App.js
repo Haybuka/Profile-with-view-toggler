@@ -15,8 +15,8 @@ function App() {
          </section>
          <Team />
          <Routes>
-            <Route path="/" element={<CardGrid />}/>
-            <Route path="list" element={<CardList />}/>
+                 <Route path="/" element={<CardGrid />}/>
+                 <Route path="list" element={<CardList />}/>
          </Routes>
       </main>
    </UserProvider>
