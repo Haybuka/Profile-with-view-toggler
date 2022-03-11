@@ -1,0 +1,80 @@
+.Card-List{
+    background-color: #A7B8A8;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.356);
+    margin: 20px 0;
+}
+.Card-div{
+    position: absolute;
+    left: -4%;
+    top: 55%;
+    transform: translate(0%,-50%) ;
+}
+.CardList-img{
+    border-radius: 50px;
+    width: 75px;
+    height: 75px;
+}
+.Card-main{
+    width: 820px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 25px 20px 25px 70px;
+    position: relative;
+    border-top-left-radius: 50px;
+}
+.CardGrid-body{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.Card-main ul{
+    display: flex;
+}
+.Card-main li{
+    margin: 0 10px;
+}
+
+@media screen and (max-width:900px){
+    .Card-main{
+        width: 500px;
+        padding: 15px 10px 15px 60px;
+    }
+    .Card-div{
+        position: absolute;
+        left: -5%;
+        top: 55%;
+        transform: translate(0%,-50%) ;
+    }
+    .CardList-img{
+        border-radius: 50px;
+        width: 60px;
+        height: 60px;
+    }
+}
+@media screen and (max-width:560px){
+    .Card-div{
+        position: static;
+        transform: translate(0);
+    }
+    .Card-main{
+        width: 100%;
+        padding: 15px 10px;
+    }
+    .CardGrid-body{
+        width: 85%;
+    }
+    .CardGrid-body h3{
+        font-size: 16px;
+    }
+    .CardGrid-body p{
+        font-size: 14px;
+    }
+}

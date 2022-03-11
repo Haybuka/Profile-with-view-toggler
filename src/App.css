@@ -1,4 +1,19 @@
 .App{
-  width: 1000px;
+  width: 900px;
   margin: 0 auto;
+  padding: 15px 0;
+  overflow-x: hidden !important;
+}
+
+@media screen and (max-width:900px){
+  .App{
+    width: 550px;
+  }
+}
+
+@media screen and (max-width:540px){
+  .App{
+    width: auto;
+    padding: 15px 10px;
+  }
 }

@@ -1,28 +1,45 @@
 .TeamSearch{
-    width: 250px;
     display: flex;
     align-items: center;
+    margin: 10px 0;
+    padding: 15px 0;
+}
+.TeamSearch-order{
+    cursor: pointer;
+    transform: rotate(0);
+    transition: all 0.4s ease-in;
+}
+.TeamSearch-order:active{
+    transform: rotate(720deg);
 }
 .TeamSearch label{
     position: relative;
     margin-left: 10px;
+    border-bottom:  2px solid #000;
 }
 .TeamSearch input{
     border: none;
-    width: 100%;
-    border-bottom:  2px solid #000;
+    width: 350px;
+    padding-left: 30px;
     outline: none;
 }
-/* .TeamSearch input:focus{
-    box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.342);
-} */
+
 .TeamSearch label span{
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: #000;
   position: absolute;
   left: 0;
   top: 50%;
   transform: translate(0,-50%);
+}
+
+@media screen and (max-width:500px){
+    .TeamSearch input{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .TeamSearch input{
+        width: 280px;
+    }
 }

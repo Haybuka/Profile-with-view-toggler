@@ -1,8 +1,22 @@
 .Team{
-
+ 
 }
 .Team-search{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.Team-grid-icon{
+    cursor: pointer;
+}
+.Team-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:520px){
+    .Team-grid{
+        justify-content: center;
+    }
 }
