@@ -35,9 +35,7 @@ function Team() {
               <CardGrid />
            </div> :
            <div>
-                {team.map(teammate => (
-                  <CardList {...teammate} key={uuid()}/>
-             ))}
+                  <CardList />
            </div>} 
     </section>
   )
